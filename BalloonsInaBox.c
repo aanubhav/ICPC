@@ -72,6 +72,7 @@ int calculatevol(int balloon[npoints][3],int box[2][3],int flag[npoints],int vol
                  for(j=0;j<i;j++)
                  {
                      d_centre = distance_balloon(balloon,myint[i],myint[j]);
+                     printf("distance bw centres : %f and %f\n",d_centre ,pow(r[myint[i]]+r[myint[j]],2));
 
                      if(d_centre < pow(r[myint[i]]+r[myint[j]],2))
                      {
@@ -117,7 +118,7 @@ int main()
 
     while(npoints != 0)
     {
-        
+
         for(i=0;i<2;i++)
             for(j=0;j<3;j++)
             {
